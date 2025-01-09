@@ -47,3 +47,59 @@ int32_t main() {
     
     return 0;
 }
+
+
+
+/*
+#include <bits/stdc++.h>
+#define int long long int
+#define endl '\n'
+using namespace std;
+
+const int N = 1e5 + 5;
+const int mod = 1e9 + 7;
+const int mn = -1;
+const int mx = 1e18+7;
+vector<int>v[1000];
+int vis[10000];
+
+void DFS(int node,vector<int>v[],int vis[])
+{
+   vis[node]=1;
+   for(int i=0;i<v[node].size();i++)
+   {
+      int child=v[node][i];
+      if(vis[child]==0)
+      {
+         DFS(child,v,vis);
+      }
+   }
+}
+int32_t main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n,m;
+    cin>>n>>m;
+    vector<int>v[1000];
+    int vis[10000];
+    while(m--)
+    {
+      int x,y;
+      cin>>x>>y;
+      v[x].push_back(y);
+      v[y].push_back(x);
+    }
+    int cnt=0;
+    for(int i=1;i<=n;i++)
+    {
+      if(vis[i]==0){
+       cnt++;
+       DFS(i,v,vis);
+    }
+    }
+    cout<<cnt<<endl;
+    
+    return 0;
+}
+*/
